@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>A-Frame Instagram</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="script.js"></script>
+    <script src="link.js"></script>
+    <script src="moreLink.js"></script>
+    <link rel="icon" href="http://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/topic_images/2016/new-instagram-icon-topic.png">
+</head>
+
+<body>
+    <a-scene>
+        <!-- Code your personal world in here! -->
+        <a-assets>
+            <img id="today" src="images/willie.jpg">
+            <img id="class" src="images/kwk-class.jpg">
+            <img id="karlie" src="images/karlie.jpg">
+            <img id="globalhack" src="images/globalhack.jpg">
+            <img id="group" src="images/smartkookie.jpg">
+            <img id="lastyear" src="images/2016.jpg">
+            <img id="cupcake" src="images/cupcake.jpg">
+            <img id="guard" src="images/guard.jpg">
+            <img id="hunter" src="images/hunter.jpg">
+            <img id="me" src="images/me.jpg">
+        </a-assets>
+        <!--view-->
+
+        <a-entity position="0 -0.5 0" id="camera">
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+        </a-entity>
+        
+        <a-cone color="black" radius-bottom="0.1" height=".2" radius-top="0.01" position="0 -0.5 -2" id="levelOne" onclick="levelOne()"></a-cone>
+        
+        <a-cone color="black" radius-bottom="0.1" height=".2" radius-top="0.01" position="0 1 -6" rotation= "270 0 0" id="levelTwo" onclick="levelTwo()"></a-cone>
+        
+        <a-cone color="black" radius-bottom="0.1" height=".2" radius-top="0.01" position="0.25 1 -6" rotation= "90 0 0" id="levelTwoBack" onclick="original()"></a-cone>
+        
+         <a-cone color="black" radius-bottom="0.1" height=".2" radius-top="0.01" position="0 1.7 -10" rotation= "90 0 0" id="levelThreeBack" onclick="original()"></a-cone>
+        
+        <a-sky color="white"></a-sky>
+        <!--Bio-->
+        <a-cylinder material="src: #me" height=".5" radius="1.5" rotation="0 110 90" position="-6 7 -12"></a-cylinder>
+        <a-text visible=t rue id="username" value="emmajs16" color="black" width="20" position="-1 11 -12"></a-text>
+        <a-text visible=t rue id="posts-numbers" value="29" color="black" width="20" position="-3 10 -12"></a-text>
+        <a-text visible=t rue id="posts" value="posts" color="grey" width="17" position="-3.5 9 -12"></a-text>
+        <a-text visible=t rue id="followers-numbers" value="248" color="black" width="20" position="0 10 -12"></a-text>
+        <a-text visible=t rue id="followers" value="followers" color="grey" width="17" position="-.75 9 -12"></a-text>
+        <a-text visible=t rue id="following-numbers" value="422" color="black" width="20" position="3.75 10 -12"></a-text>
+        <a-text visible=t rue id="following" value="following" color="grey" width="17" position="3 9 -12"></a-text>
+        <a-text visible=t rue id="name" value="emma stoverink" color="black" width="17" position="-4 7 -12"></a-text>
+        <a-text visible=t rue id="bio" value=" KWK 16 • BHS 18" color="black" width="12" position="-4 6 -12"></a-text>
+        <a-box color="gray" height="0.05" width="20" depth=" 0.5" position="1 5.3 -12"></a-box>
+        <!--Pictures-->
+        <a-box material="src: #today" width="2" height="2" depth="2" position="4 0 -4" href="https://www.instagram.com/p/BWphsBVDP_s/?taken-by=emmajs16">
+            <a-animation attribute="rotation" to="360 0 0" direction="alternate" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box material="src: #class" width="2" height="2" depth="2" position="0 0 -4" href= "https://www.instagram.com/p/BWi2zfnj0wb/?taken-by=emmajs16">
+            <a-animation attribute="rotation" to="-360 0 0" direction="alternate" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box material="src: #karlie" width="2" height="2" depth="2" position="-4 0 -4" href="https://www.instagram.com/p/BSSZeWGDYtN/?taken-by=emmajs16">
+            <a-animation attribute="rotation" to="360 0 0" direction="alternate" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box material="src: #globalhack" width="2" height="2" depth="2" position="4 1 -8" href= "https://www.instagram.com/p/BL900CLDrX3/?taken-by=emmajs16">
+            <a-animation attribute="rotation" to="-360 0 0" direction="alternate" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box material="src: #group" width="2" height="2" depth="2" position="0 1 -8" href= "https://www.instagram.com/p/BHXLbQWj8vt/?taken-by=emmajs16">
+            <a-animation attribute="rotation" to="360 0 0" direction="alternate" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box material="src: #lastyear" width="2" height="2" depth="2" position="-4 1 -8" href= "https://www.instagram.com/p/BG4_sy0GpNM/?taken-by=emmajs16">
+            <a-animation attribute="rotation" to="-360 0 0" direction="alternate" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box material="src: #cupcake" width="2" height="2" depth="2" position="4 2 -12" href= "https://www.instagram.com/p/BGA4aRtmpGY/?taken-by=emmajs16">
+            <a-animation attribute="rotation" to="360 0 0" direction="alternate" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box material="src: #guard" width="2" height="2" depth="2" position="0 2 -12" href= "https://www.instagram.com/p/BDvhX3nmpDA/?taken-by=emmajs16">
+            <a-animation attribute="rotation" to="-360 0 0" direction="alternate" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+        <a-box material="src: #hunter" width="2" height="2" depth="2" position="-4 2 -12" href= "https://www.instagram.com/p/-48KgfmpBx/?taken-by=emmajs16">
+            <a-animation attribute="rotation" to="360 0 0" direction="alternate" dur="5000" repeat="indefinite"></a-animation>
+        </a-box>
+    </a-scene>
+
+</body>
+
+</html>
